@@ -14,6 +14,9 @@ import {RouterModule} from '@angular/router';
 import {MatTableModule} from '@angular/material/table';
 import  {  ToastrModule  }  from  'ngx-toastr' ;
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -36,7 +39,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
-   
+    MatFormFieldModule,
+    MatInputModule
+    
   ],
   exports:[
     HeaderComponent,
@@ -45,7 +50,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTableModule,
      MatIconModule, // <-- here
      ToastrModule,
-     MatTooltipModule
+     MatTooltipModule,
+     MatFormFieldModule,
+     MatInputModule
+     
   ]
 })
 export class SharedModule { }
