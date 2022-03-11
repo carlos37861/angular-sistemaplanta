@@ -34,16 +34,20 @@ export class LoginComponent implements OnInit {
       App:10
     };
     this.loading=true;
-    if(usuario.Username=='DEMO101' && usuario.Password=='DEMO101'){
+     if(usuario.Username=='demo101' && usuario.Password=='demo101'){
       this.fakeloading();
-    }else{
-      this._snackBar.open('Usuario o contraseña ingresado son invalidos','',{
-             duration:5000,
-            horizontalPosition:'center',
-             verticalPosition:'bottom'
-           });
-           this.loading=false;
-    }
+    //   this.loginService.login2().subscribe(data=>{
+    //     console.log(data);
+       }
+    
+    // }else{
+    //   this._snackBar.open('Usuario o contraseña ingresado son invalidos','',{
+    //          duration:5000,
+    //         horizontalPosition:'center',
+    //          verticalPosition:'bottom'
+    //        });
+    //        this.loading=false;
+    // }
     // this.loginService.login(usuario).subscribe(data=>{
     //   console.log('entro');
     //   console.log(data +'prueba');
@@ -58,7 +62,7 @@ export class LoginComponent implements OnInit {
     // })
   }
 
-
+  
   fakeloading(){
     this.loading=true;
     setTimeout(() => {

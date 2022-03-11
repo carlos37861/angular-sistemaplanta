@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -21,7 +21,12 @@ export class LoginService {
   
 
   login(usuario:User):Observable<any>{
-    console.log(this.myAppUrl+this.myApiUrl,JSON.stringify(usuario), {headers:this.headers});
+
     return this.http.post(this.myAppUrl+this.myApiUrl,JSON.stringify(usuario), {headers:this.headers})
+  }
+
+
+  login2():Observable<any>{
+    return this.http.get('http://localhost:5162/api/Repositorio')
   }
 }

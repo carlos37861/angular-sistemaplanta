@@ -18,7 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
-
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatInputModule,
     HttpClientModule,
     MatSortModule,
-    
+    MatTreeModule
     
   ],
   exports:[
@@ -61,7 +61,7 @@ import { MatSortModule } from '@angular/material/sort';
      MatInputModule,
      HttpClientModule,
      MatSortModule,
-
+     MatTreeModule
      
   ]
 })

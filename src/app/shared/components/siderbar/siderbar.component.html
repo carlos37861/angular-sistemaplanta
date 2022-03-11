@@ -1,24 +1,23 @@
 <mat-nav-list>
     <div class="profile-card">
-        <div class="header">
-            <h2>Laytaruma</h2>
-            <h4>ejemplo@laytaruma.com.pe</h4>
+ 
+        <img src="../../../../assets/img/logo-icon-laytaruma.png" alt="Soufiane FADIL">
+               <div class="header">
+            <h2>Sistema Integrado de Gestión</h2>
         </div>
-        <img src="https://toppng.com/uploads/preview/pagina-web-icono-11550113637ijuuyj9xpo.png" alt="Soufiane FADIL">
     </div>
     <mat-divider>      
     </mat-divider>
 
-    <h2 matSubheader>Paginas</h2>
+    <h2 matSubheader>Módulos</h2>
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/dashboard">Dashboard</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/posts">Posts</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
-
-    <mat-divider>      
-    </mat-divider>
-
-    <h2 matSubheader>Tools</h2>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts"><mat-icon>import_contacts</mat-icon> Contactos</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts"><mat-icon>contact_phone</mat-icon> Somos</a>
+    <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Mantenimiento</span>
+        <mat-icon mat-list-icon>settings</mat-icon>
+        <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+    </mat-list-item>
+    <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/dashboard"><mat-icon>work</mat-icon>Repositorio</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/posts"><mat-icon>subtitles</mat-icon>Metadata</a>
+    </div>
 </mat-nav-list>

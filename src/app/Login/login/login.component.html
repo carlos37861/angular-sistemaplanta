@@ -1,9 +1,10 @@
 <div class="body">
-
-<div class="login">
-    <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
-    <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
-    <h1>Sistema Prueba </h1>
+    <mat-spinner *ngIf="loading" color="success" class="spinner" diameter="50"></mat-spinner>
+<div class="login" *ngIf="!loading">
+    <form [formGroup]="form" (ngSubmit)="ingresar()" class="form">
+    <h1>Sistema Integrado de Gestión </h1>
+    <mat-divider>      
+    </mat-divider>
     <img src="../assets/img/usuario.png" width="50%">
     <mat-form-field class="ancho" appearance="outline">
         <mat-label>Usuario</mat-label>

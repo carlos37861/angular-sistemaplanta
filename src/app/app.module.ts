@@ -15,6 +15,7 @@ import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { RouterModule } from '@angular/router';
 import { MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDividerModule} from '@angular/material/divider'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatProgressSpinnerModule,
     RouterModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDividerModule
 
 
   ],
