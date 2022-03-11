@@ -16,6 +16,9 @@ import  {  ToastrModule  }  from  'ngx-toastr' ;
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { MatInputModule } from '@angular/material/input';
       positionClass: 'toast-bottom-right'
     }),
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatSortModule,
+    
     
   ],
   exports:[
@@ -52,7 +58,10 @@ import { MatInputModule } from '@angular/material/input';
      ToastrModule,
      MatTooltipModule,
      MatFormFieldModule,
-     MatInputModule
+     MatInputModule,
+     HttpClientModule,
+     MatSortModule,
+
      
   ]
 })

@@ -2,26 +2,17 @@ import { Component, DefaultIterableDiffer, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DefaultModule } from './layouts/default/default.module';
+import { LoginComponent } from './Login/login/login.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostsComponent } from './modules/posts/posts.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'login',component:LoginComponent},
+  {path:'home',component:DefaultComponent,children:[{path:'home',component:DashboardComponent},{path:'posts',component: PostsComponent},
+  {path:'**',redirectTo:'home',pathMatch:'full'},
   
-  {
-  path:'',
-  component:DefaultComponent,
-  children:[{
-    path:'',
-    component:DashboardComponent
-  },{
-  path:'posts',
-  component: PostsComponent 
-  },
-  {
-    path:'**',
-    redirectTo:'',
-    pathMatch:'full'
-  }
+ 
 ]
 },
 
