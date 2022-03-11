@@ -19,7 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatTreeModule} from '@angular/material/tree';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -46,7 +46,8 @@ import {MatTreeModule} from '@angular/material/tree';
     MatInputModule,
     HttpClientModule,
     MatSortModule,
-    MatTreeModule
+    MatTreeModule,
+    MatExpansionModule
     
   ],
   exports:[
@@ -61,7 +62,8 @@ import {MatTreeModule} from '@angular/material/tree';
      MatInputModule,
      HttpClientModule,
      MatSortModule,
-     MatTreeModule
+     MatTreeModule,
+     MatExpansionModule
      
   ]
 })

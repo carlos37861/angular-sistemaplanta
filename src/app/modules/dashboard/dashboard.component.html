@@ -1,7 +1,38 @@
-<mat-form-field appearance="standard">
+
+<h1>Repositorio</h1>
+    <mat-divider>      
+    </mat-divider>
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <mat-icon>search</mat-icon> Busqueda de Repositorios
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Empresa</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Categoría</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Categoría</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+
+
+<!-- <mat-form-field appearance="standard">
     <mat-label>Filtrar</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input>
-  </mat-form-field>
+</mat-form-field> -->
   
   
 

@@ -25,7 +25,19 @@ export interface PeriodicElement {
 
 export class DashboardComponent implements OnInit {
 
+  step = 0;
 
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
+  }
   //prueba con api publica
   objeto:PruebaI[]=[];
   displayedColumns: string[] = ['userId', 'id', 'title', 'body','acciones'];
