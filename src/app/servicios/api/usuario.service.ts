@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class UsuarioService {
 
-  myAppUrl=environment.endpoint;
+  myAppUrl=environment.UriGeneral;
   myApiUrl='/usuario/UserLogin/';
   constructor(private http:HttpClientModule) { }
 
