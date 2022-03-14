@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { LoginComponent } from './Login/login/login.component';
+
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,11 +16,16 @@ import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { RouterModule } from '@angular/router';
 import { MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { MatDividerModule} from '@angular/material/divider'
+import { MatDividerModule} from '@angular/material/divider';
+import { RepositorioComponent } from './modules/repositorio/repositorio.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSortModule} from '@angular/material/sort';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    RepositorioComponent,
 
   ],
   imports: [
@@ -36,9 +42,10 @@ import { MatDividerModule} from '@angular/material/divider'
     RouterModule,
     MatIconModule,
     HttpClientModule,
-    MatDividerModule
-
-
+    MatDividerModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

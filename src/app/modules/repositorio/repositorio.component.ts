@@ -1,11 +1,15 @@
+import { Component, OnInit, ViewChild } from '@angular/core';
+
 import {LiveAnnouncer} from '@angular/cdk/a11y';
-import { AfterViewInit,Component, OnInit , ViewChild } from '@angular/core';
+
 import { MatTableDataSource ,} from '@angular/material/table';
 import { ToastrService } from 'ngx-toastr';
 import swal from'sweetalert2';
 import { ApiService } from 'src/app/servicios/api/api.service';
 import { PruebaI } from 'src/app/modelos/prueba.interface';
 import {MatSort,Sort} from '@angular/material/sort';
+import { ResponseModel } from 'src/app/modelos/responsemodel';
+import { Repositorio } from 'src/app/modelos/repositorio';
 
 export interface PeriodicElement {
   name: string;
@@ -17,13 +21,13 @@ export interface PeriodicElement {
 
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-repositorio',
+  templateUrl: './repositorio.component.html',
+  styleUrls: ['./repositorio.component.css']
 })
 
 
-export class DashboardComponent implements OnInit {
+export class RepositorioComponent implements OnInit {
 
   step = 0;
 
@@ -40,8 +44,9 @@ export class DashboardComponent implements OnInit {
   }
   //prueba con api publica
   objeto:PruebaI[]=[];
-  displayedColumns: string[] = ['userId', 'id', 'title', 'body','acciones'];
+  displayedColumns: string[] = ['Codigo', 'Abreviatura', 'Descripcion', 'Usuario','fechareg','acciones'];
   dataSource:any;
+
 
   constructor(private toastr: ToastrService,private api:ApiService,private _liveAnnouncer: LiveAnnouncer) { }
 
@@ -59,9 +64,14 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getAllPrueba().subscribe(data=>{
-      this.dataSource = new MatTableDataSource<PruebaI>(data);
+      console.log(data);
+      this.objeto=data.result;
+      this.dataSource = new MatTableDataSource<Repositorio>(this.objeto);
+
       this.dataSource.sort = this.sort;
-    })
+    },err => {
+      console.log(err.message);
+    });
   }
   prueba(){
     this.toastr.success('success','Se registro bien')

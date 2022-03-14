@@ -3,17 +3,21 @@ import { PruebaI } from '../../modelos/prueba.interface';
 import { ResponseI } from '../../modelos/response.interface' ;
 import { HttpClient,HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ResponseModel } from 'src/app/modelos/responsemodel';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  url:string="http://jsonplaceholder.typicode.com/";
-  constructor(private http:HttpClient) { }
 
-  getAllPrueba():Observable<PruebaI[]>{
-      let direccion=this.url+"posts";
-      return this.http.get<PruebaI[]>(direccion);
+    urlApp:string=environment.endpoint;
+    urlApi:string="api/Repositorio/";
+  constructor(private http:HttpClient) { }
+  
+  getAllPrueba():Observable<ResponseModel>{
+     let direccion=this.urlApp+this.urlApi;
+      return this.http.get<ResponseModel>(direccion);
   }
 }

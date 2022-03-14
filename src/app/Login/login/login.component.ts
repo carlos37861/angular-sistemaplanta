@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { User } from 'src/app/modelos/user';
-import { LoginService } from 'src/app/servicios/login.service';
+import { LoginService } from 'src/app/servicios/api/login.service';
 
 
 

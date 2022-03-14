@@ -4,9 +4,9 @@
          <mat-icon>menu</mat-icon>
      </button>
      <span style="padding-left: 8px;">SIG</span> <mat-icon style="padding-left: 18px;">dvr</mat-icon>
-     <div fxFLex fxLayout="row"  fxFlex fxLayoutAlign="end">
-         <ul fxLayout="row" fxLayoutGap="20px">
-             <li>
+     <div fxFLex fxLayout="row"  fxFlex fxLayoutAlign="end" class="pt-3">
+         <ul fxLayout="row" fxLayoutGap="20px" >
+             <!-- <li>
                  <button mat-icon-button>
                     <mat-icon>settings</mat-icon>
                  </button>
@@ -15,13 +15,14 @@
                 <button mat-icon-button>
                    <mat-icon>help_outline</mat-icon>
                 </button>
-            </li>
-            <li>
+            </li> -->
+            <li >
+                
                 <button mat-button [matMenuTriggerFor]="menu">
                     <mat-icon>person</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu">
-                    <button mat-menu-item (click)="CerrarSesion()">
+                    <button mat-menu-item (click)="CerrarSesion()" >
                         <mat-icon>exit_to_app</mat-icon>
                         Cerrar Sesión
                     </button>

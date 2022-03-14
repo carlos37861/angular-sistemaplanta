@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SiderbarComponent } from './components/siderbar/siderbar.component';
+import { RepositorioComponent } from '../modules/repositorio/repositorio.component';
 import { MatDividerModule} from '@angular/material/divider'
 import { MatToolbarModule} from '@angular/material/toolbar'
 import { MatIconModule} from '@angular/material/icon'
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
+
 @NgModule({
   declarations: [
     HeaderComponent,
