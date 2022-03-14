@@ -13,7 +13,7 @@ export class LoginService {
   myApiUrl: string='';
   headers;
   constructor(private http:HttpClient) { 
-    this.myAppUrl=environment.endpoint;
+    this.myAppUrl=environment.UriGeneral;
     this.myApiUrl='usuario/UserLogin/'
     this.headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 
     'Bareer '+ 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InhPcHl0MEo3SFNBcXM1WCIsImdpdmVuX25hbWUiOiJUcmF6YWJpbGlkYWQiLCJuYW1laWQiOiJHZW9UcmF6IiwianRpIjoiNzBhYjgyMWEtY2FiZC00NDJjLTkxZjctNTVkMGE3N2E2MzI2IiwiZXhwIjoxNjQ2ODYxNjY4fQ.XTYCyqe7FQFILeIvuo7sdUTeFCKAyoGUvjK-sRgbX8g'});

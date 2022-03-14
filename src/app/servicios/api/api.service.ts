@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
 
 
-    urlApp:string=environment.endpoint;
+    urlApp:string=environment.UriGeneral;
     urlApi:string="api/Repositorio/";
   constructor(private http:HttpClient) { }
   
