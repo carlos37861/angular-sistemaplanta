@@ -1,8 +1,8 @@
-import { PruebaI } from "./prueba.interface";
+
 
 export class ResponseModel{
     success!:boolean;
-    result!: PruebaI[];
+    result!: [];
     errorMessage!:string;
     RepeatOption!:boolean;
     MethodToRepeat!: string;

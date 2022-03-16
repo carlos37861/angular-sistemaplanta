@@ -11,13 +11,6 @@ import {MatSort,Sort} from '@angular/material/sort';
 import { ResponseModel } from 'src/app/modelos/responsemodel';
 import { Repositorio } from 'src/app/modelos/repositorio';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
 
 
 @Component({

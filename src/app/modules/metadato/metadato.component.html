@@ -1,0 +1,22 @@
+
+<h1>Metadato</h1>
+<mat-divider>      
+</mat-divider>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <th scope="col">Código</th>
+        <th scope="col">Nombre Dato</th>
+        <th scope="col">Tipo Dato</th>
+        <th colspan="2">Acciones</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let metadato of metadatos">
+            <td>{{metadato.v_IDMETADATO}}</td>
+            <td>{{metadato.v_NOMBREDATO}}</td>
+            <td>{{metadato.v_TIPODATO}}</td>
+            <td><button class="btn btn-warning" (click)="Editar(metadato.v_IDMETADATO)">Editar</button></td>
+            <td><button class="btn btn-danger" (click)="Eliminar(metadato.v_IDMETADATO)">Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>

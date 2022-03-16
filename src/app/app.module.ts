@@ -21,11 +21,13 @@ import { RepositorioComponent } from './modules/repositorio/repositorio.componen
 import {MatTableModule} from '@angular/material/table';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSortModule} from '@angular/material/sort';
+import { MetadatoComponent } from './modules/metadato/metadato.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RepositorioComponent,
+    MetadatoComponent,
 
   ],
   imports: [
