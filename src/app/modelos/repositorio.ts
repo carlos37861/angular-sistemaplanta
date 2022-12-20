@@ -1,5 +1,4 @@
 export class Repositorio{
-  
     V_IDREPOSITORIO!:string;
     V_ABREVIATURA!:string;
     V_TITULOMODULOS!:string;

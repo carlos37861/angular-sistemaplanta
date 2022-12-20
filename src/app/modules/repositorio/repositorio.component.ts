@@ -57,7 +57,6 @@ export class RepositorioComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getAllPrueba().subscribe(data=>{
-      console.log(data);
       this.objeto=data.result;
       this.dataSource = new MatTableDataSource<Repositorio>(this.objeto);
 

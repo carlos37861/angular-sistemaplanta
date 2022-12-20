@@ -19,14 +19,11 @@ export class LoginService {
     'Bareer '+ 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InhPcHl0MEo3SFNBcXM1WCIsImdpdmVuX25hbWUiOiJUcmF6YWJpbGlkYWQiLCJuYW1laWQiOiJHZW9UcmF6IiwianRpIjoiNzBhYjgyMWEtY2FiZC00NDJjLTkxZjctNTVkMGE3N2E2MzI2IiwiZXhwIjoxNjQ2ODYxNjY4fQ.XTYCyqe7FQFILeIvuo7sdUTeFCKAyoGUvjK-sRgbX8g'});
   }
   
-
   login(usuario:User):Observable<any>{
-
     return this.http.post(this.myAppUrl+this.myApiUrl,JSON.stringify(usuario), {headers:this.headers})
   }
 
-
   login2():Observable<any>{
-    return this.http.get('http://localhost:5162/api/Repositorio')
+    return this.http.get('http://localhost:5162/api/Repositorio/Listar-Repositorio')
   }
 }

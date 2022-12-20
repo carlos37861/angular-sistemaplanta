@@ -1,29 +1,37 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="background-color:#2087C5;">
     <mat-toolbar-row>
-     <button mat-icon-button (click)="toggleSideBar()">
+     <button mat-icon-button (click)="toggleSideBar()" style="color:white">
          <mat-icon>menu</mat-icon>
      </button>
-     <span style="padding-left: 8px;">SIG</span> <mat-icon style="padding-left: 18px;">dvr</mat-icon>
+     <span style="padding-left: 8px;color:white"></span> <mat-icon hidden style="padding-left: 18px;color:white">autorenew</mat-icon>
      <div fxFLex fxLayout="row"  fxFlex fxLayoutAlign="end" class="pt-3">
          <ul fxLayout="row" fxLayoutGap="20px" >
-             <!-- <li>
+            <li>
                  <button mat-icon-button>
-                    <mat-icon>settings</mat-icon>
+                    <mat-icon style="color:white">settings</mat-icon>
                  </button>
              </li>
              <li>
                 <button mat-icon-button>
-                   <mat-icon>help_outline</mat-icon>
+                   <mat-icon style="color:white">help_outline</mat-icon>
                 </button>
-            </li> -->
+            </li>
             <li >
                 
                 <button mat-button [matMenuTriggerFor]="menu">
-                    <mat-icon>person</mat-icon>
+                    <mat-icon style="color:white">person</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu">
-                    <button mat-menu-item (click)="CerrarSesion()" >
-                        <mat-icon>exit_to_app</mat-icon>
+                    <div class="d-flex no-block align-items-center p-3 mb-0 ">
+                        <div class=""><img src="../../../../assets/img/usuario.png" alt="user" class="rounded-circle" width="60"></div>
+                        <div class="ms-2">
+                            <h4 class="mb-0" id="usuario-nombre">Carlos Perez</h4>
+                            <p class=" mb-0" id="usuario-email">carlos@laytaruma.com</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <button mat-menu-item (click)="CerrarSesion()" style="width:100%;" >
+                        <mat-icon style="color:#E15639">exit_to_app</mat-icon>
                         Cerrar Sesión
                     </button>
                 </mat-menu>

@@ -13,7 +13,7 @@ export class ApiService {
 
 
     urlApp:string=environment.UriGeneral;
-    urlApi:string="api/Repositorio/";
+    urlApi:string="api/Repositorio/Listar-Repositorio";
   constructor(private http:HttpClient) { }
   
   getAllPrueba():Observable<ResponseModel>{
