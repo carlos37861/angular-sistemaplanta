@@ -22,12 +22,18 @@ import {MatTableModule} from '@angular/material/table';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSortModule} from '@angular/material/sort';
 import { MetadatoComponent } from './modules/metadato/metadato.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatListModule} from '@angular/material/list';
+import { CambiosComponent } from './modules/cambios/cambios.component';
+import { ProyectosComponent } from './modules/proyectos/proyectos.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RepositorioComponent,
     MetadatoComponent,
+    CambiosComponent,
+    ProyectosComponent,
 
   ],
   imports: [
@@ -47,7 +53,10 @@ import { MetadatoComponent } from './modules/metadato/metadato.component';
     MatDividerModule,
     MatTableModule,
     MatExpansionModule,
-    MatSortModule
+    MatSortModule,
+    MatBadgeModule,
+    MatListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
